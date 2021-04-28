@@ -1,13 +1,9 @@
 
 import React from 'react';
-import DrawerNavigator from './src/navigations/Drawer'
+import AuthNavigator from './src/auth/AuthNavigator'
 
 export default function App() {
   return (
-    <DrawerNavigator/>
+    <AuthNavigator/>
   );
 }
-
-
-// You can import Ionicons from @expo/vector-icons if you use Expo or
-// react-native-vector-icons/Ionicons otherwise.

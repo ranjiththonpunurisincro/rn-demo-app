@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createStackNavigator } from '@react-navigation/stack';
-import { NavigationContainer } from '@react-navigation/native';
 import { Button, View, Text } from 'react-native';
 import StackNavigator from './Stack'
 const ProfileStack = createStackNavigator();
@@ -77,13 +76,11 @@ function ContactStackNavigator() {
 
 export default function DrawerNavigator() {
   return (
-    <NavigationContainer>
       <Drawer.Navigator  initialRouteName="Home">
         <Drawer.Screen name="Home" component={StackNavigator} />
         <Drawer.Screen name="Profile" component={ProfileStackNavigator} />
         <Drawer.Screen name="Settings" component={SettingsStackNavigator} />
          <Drawer.Screen name="Contact Us" component={ContactStackNavigator} />
       </Drawer.Navigator>
-    </NavigationContainer>
   );
 }
